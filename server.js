@@ -105,7 +105,7 @@ router.route('/bears')
 // REGISTER OUR ROUTES -------------------------------
 // all of our routes will be prefixed with /api
 router.get('/a', function(req,res){
-  cosole.log('Received a request for /a');
+  console.log('Received a request for /a');
   res.json({message: 'This is a call to a'});
 });
 
