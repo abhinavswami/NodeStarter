@@ -27,13 +27,13 @@ var router = express.Router();
 
 router.use(function(req,res,next){
   // do logging
-  console.log('Router is in use');
+  console.log('Router is in use - '+ req.url);
   next();
 });
 
 // A simple get request
 router.get('/', function(req,res){
-  res.json({message: 'Hooray! Welcomne to our api'});
+  res.send('Hooray! Welcomne to our api');
 });
 
 router.route('/bears')
@@ -41,7 +41,7 @@ router.route('/bears')
   .post(function(req,res){
 
       console.log('Received a post request for bears');
-      var bear = new Bear({name : "Abhi"});  // create a new instance of bear models
+      var bear = new Bear({name : "Bear1"});  // create a new instance of bear models
       console.log('Created an intance of bear');
       bear.name = req.body.name;  // set the bears name (comes from the req)
       console.log('Extracted the name from the req : '+ bear.name);
