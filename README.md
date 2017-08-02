@@ -15,5 +15,11 @@ Sample node application for beginners using Node.js, Express and Mongoose
 	npm start
 	Then visit localhost:8080/ in your browser
 	
+## Routes supported:
+	GET : http://localhost:8080/api/
+	GET, POST : http://localhost:8080/api/bears
+	GET, PUT, DELETE : http://localhost:8080/api/bears/:bear_id
+	
+	
 	
      
